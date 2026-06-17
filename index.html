@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>豆瓣 Top250 前十电影推荐</title>
+    <meta
+      name="description"
+      content="豆瓣电影 Top250 前十电影推荐，点击原创封面查看演员列表和电影介绍。"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="site-header">
+        <div>
+          <p class="eyebrow">Douban Top 250 · Top 10</p>
+          <h1>豆瓣 Top250 前十电影推荐</h1>
+        </div>
+        <p class="intro">
+          以 2026-06-17 读取的豆瓣电影 Top250 前十为准。点击任意原创封面，查看演员列表与电影介绍。
+        </p>
+      </header>
+
+      <section class="movie-grid" aria-label="电影封面列表" id="movieGrid"></section>
+    </main>
+
+    <dialog class="movie-dialog" id="movieDialog" aria-labelledby="dialogTitle">
+      <button class="dialog-close" type="button" aria-label="关闭详情" id="closeDialog">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="dialog-layout">
+        <img class="dialog-cover" id="dialogCover" src="" alt="">
+        <article class="dialog-copy">
+          <p class="dialog-rank" id="dialogRank"></p>
+          <h2 id="dialogTitle"></h2>
+          <p class="dialog-original" id="dialogOriginal"></p>
+          <dl class="facts">
+            <div>
+              <dt>年份</dt>
+              <dd id="dialogYear"></dd>
+            </div>
+            <div>
+              <dt>地区</dt>
+              <dd id="dialogCountry"></dd>
+            </div>
+            <div>
+              <dt>类型</dt>
+              <dd id="dialogGenres"></dd>
+            </div>
+            <div>
+              <dt>评分</dt>
+              <dd id="dialogRating"></dd>
+            </div>
+          </dl>
+          <section>
+            <h3>演员列表</h3>
+            <ul class="actors" id="dialogActors"></ul>
+          </section>
+          <section>
+            <h3>电影介绍</h3>
+            <p class="description" id="dialogDescription"></p>
+          </section>
+        </article>
+      </div>
+    </dialog>
+
+    <script src="app.js"></script>
+  </body>
+</html>
